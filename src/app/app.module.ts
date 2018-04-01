@@ -8,8 +8,8 @@ import { MainComponent } from './component/container/main/main.component';
 import { HuobiService } from './service/exchange/huobi.service';
 import { BithumbService } from './service/exchange/bithumb.service';
 import { HttpClientModule } from '@angular/common/http';
-import { ValuePipe } from './pipe/value.pipe';
 import { ValueDirective } from './directive/value.directive';
+import { BitflyerService } from './service/exchange/bitflyer.sevice';
 
 
 @NgModule({
@@ -17,7 +17,6 @@ import { ValueDirective } from './directive/value.directive';
     AppComponent,
     OrderBookComponent,
     MainComponent,
-    ValuePipe,
     ValueDirective
   ],
   imports: [
@@ -30,7 +29,8 @@ import { ValueDirective } from './directive/value.directive';
   ],
   providers: [
     HuobiService,
-    BithumbService
+    BithumbService,
+    BitflyerService
   ],
   bootstrap: [AppComponent]
 })

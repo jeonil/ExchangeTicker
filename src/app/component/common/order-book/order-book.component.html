@@ -9,9 +9,9 @@
   <section class="section asks">
     <section class="row no-gutters" *ngFor="let item of asks, let i = index; trackBy: trackByFunc">
       <div class="col col-3 text-ask">ask {{limit - i}}</div>
-      <div class="col col-3">{{item.price | value : decimal.base}}</div>
-      <div class="col col-3">{{item.quantity | value : decimal.counter}}</div>
-      <div class="col col-3">{{item.total | value : decimal.counter}}</div>
+      <div class="col col-3" [appValue]="item.price" [decimal]="decimal.base"></div>
+      <div class="col col-3" [appValue]="item.quantity" [decimal]="decimal.counter"></div>
+      <div class="col col-3" [appValue]="item.total" [decimal]="decimal.counter"></div>
       <div class="gage" [style.width.%]="item.total / maxTotal * 25"></div>
     </section>
   </section>
@@ -19,9 +19,9 @@
   <section class="section bids">
     <section class="row no-gutters" *ngFor="let item of bids, let i = index;  trackBy: trackByFunc">
       <div class="col col-3 text-bid">bids {{i + 1}}</div>
-      <div class="col col-3">{{item.price | value : decimal.base}}</div>
-      <div class="col col-3">{{item.quantity | value : decimal.counter}}</div>
-      <div class="col col-3">{{item.total | value : decimal.counter}}</div>
+      <div class="col col-3" [appValue]="item.price" [decimal]="decimal.base"></div>
+      <div class="col col-3" [appValue]="item.quantity" [decimal]="decimal.counter"></div>
+      <div class="col col-3" [appValue]="item.total" [decimal]="decimal.counter"></div>
       <div class="gage" [style.width.%]="item.total / maxTotal * 25"></div>
     </section>
   </section>

@@ -1,10 +1,10 @@
-<main class="row no-gutters">
-  <div class="col col-6">
-    <div class="orderbook-title">Huobi</div>
+<main class="row no-gutters p-2">
+  <div class="col col-lg-4 col-md-6 col-12 pr-1">
+    <div class="orderbook-title">Huobi (BTC/USDT)</div>
     <app-order-book [orderbook]="HuobiService.market.btc_usdt.orderbook" [decimal]="HuobiService.market.btc_usdt.decimal"></app-order-book>
   </div>
-  <div class="col col-6">
-    <div class="orderbook-title">Bithumb</div>
+  <div class="col col-lg-4 col-md-6 col-12 pl-1">
+    <div class="orderbook-title">Bithumb (BTC/KRW)</div>
     <app-order-book [orderbook]="BithumbService.market.btc_krw.orderbook" [decimal]="BithumbService.market.btc_krw.decimal"></app-order-book>
   </div>
 </main>

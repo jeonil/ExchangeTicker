@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HuobiService } from '../../../service/exchange/huobi.service';
 import { BithumbService } from '../../../service/exchange/bithumb.service';
+import { BitflyerService } from '../../../service/exchange/bitflyer.sevice';
 
 @Component({
   selector: 'app-main',
@@ -11,7 +12,8 @@ export class MainComponent implements OnInit {
 
   constructor(
     private BithumbService: BithumbService,
-    private HuobiService: HuobiService
+    private HuobiService: HuobiService,
+    private BitflyerService: BitflyerService
   ) { }
 
   ngOnInit() {
