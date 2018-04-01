@@ -1,0 +1,2 @@
+# ExchangeTicker
+Angular_5_Application
