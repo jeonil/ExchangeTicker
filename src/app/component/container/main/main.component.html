@@ -1,0 +1,10 @@
+<main class="row no-gutters">
+  <div class="col col-6">
+    <div class="orderbook-title">Huobi</div>
+    <app-order-book [orderbook]="HuobiService.market.btc_usdt.orderbook" [decimal]="HuobiService.market.btc_usdt.decimal"></app-order-book>
+  </div>
+  <div class="col col-6">
+    <div class="orderbook-title">Bithumb</div>
+    <app-order-book [orderbook]="BithumbService.market.btc_krw.orderbook" [decimal]="BithumbService.market.btc_krw.decimal"></app-order-book>
+  </div>
+</main>

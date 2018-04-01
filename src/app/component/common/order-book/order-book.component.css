@@ -1,0 +1,46 @@
+
+.section > .row:nth-child(2n-1){
+    background-color: rgb(240, 245, 250);
+}
+
+.section > .row {
+    position: relative;
+    z-index: 1;
+}
+
+.section > .row > .gage{
+    position: absolute;
+    top:0;
+    right: 75%;
+    height:100%;
+    z-index: -1;
+    transition: width 0.2s ease;
+}
+
+.section.asks > .row > .gage {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.section.bids > .row > .gage {
+    background-color: rgba(0, 0, 255, 0.1);
+}
+
+.section.asks > .row{
+    animation: newAsk 1s ease;
+}
+
+.section.bids > .row{
+    animation: newBid 1s ease;
+}
+
+@keyframes newAsk {
+    50%{
+        background-color: rgba(255,0,0,0.1);
+    }
+}
+
+@keyframes newBid {
+    50%{
+        background-color: rgba(0,0,255,0.1);
+    }
+}

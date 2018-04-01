@@ -1,0 +1,9 @@
+.text-bid,
+.text-increase {
+    color: #007bff!important;
+}
+
+.text-ask,
+.text-decrease {
+    color:#dc3545!important;
+}
